@@ -14,7 +14,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Walking Space.unity
     guid: cd6ec89a20e782f4c9428771826f5844
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Rube Goldberg.unity
     guid: 3d26025a2a51ff74cb73ca084481c022
+  - enabled: 1
+    path: Assets/Treasure Hunt/Treasure Hunt.unity
+    guid: db308243139e5a6478618bf6b67d750f
   m_configObjects: {}
