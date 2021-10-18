@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Rube Goldberg.unity
     guid: 3d26025a2a51ff74cb73ca084481c022
   - enabled: 1
-    path: Assets/Treasure Hunt/Treasure Hunt.unity
+    path: Assets/Treasure Hunt/Scenes/Treasure Hunt.unity
     guid: db308243139e5a6478618bf6b67d750f
+  - enabled: 1
+    path: Assets/Treasure Hunt/Scenes/Advanced Treasure Hunt.unity
+    guid: 1f15ce253dfce2445a13441d1948bad3
   m_configObjects: {}
