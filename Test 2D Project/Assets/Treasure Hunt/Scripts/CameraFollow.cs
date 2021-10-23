@@ -8,10 +8,10 @@ public class CameraFollow : MonoBehaviour
     float yBuffer = 2f;
     float xBuffer = 4f;
 
-    float leftBoundary = -48f;
-    float rightBoundary = 21f;
-    float topBoundary = 26f;
-    float bottomBoundary = -26f;
+    public float leftBoundary = -48f;
+    public float rightBoundary = 21f;
+    public float topBoundary = 26f;
+    public float bottomBoundary = -26f;
 
     // Start is called before the first frame update
     void Start()
