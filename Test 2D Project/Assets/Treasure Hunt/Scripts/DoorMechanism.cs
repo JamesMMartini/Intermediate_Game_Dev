@@ -35,9 +35,12 @@ public class DoorMechanism : ButtonObject
     {
         boxes.Remove(box);
 
-        // Close the door
-        sprite.enabled = true;
-        collider.enabled = true;
+        if (boxes.Count < buttonNum)
+        {
+            // Close the door
+            sprite.enabled = true;
+            collider.enabled = true;
+        }
     }
 
     // Update is called once per frame
