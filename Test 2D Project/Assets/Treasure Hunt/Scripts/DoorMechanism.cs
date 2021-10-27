@@ -22,10 +22,16 @@ public class DoorMechanism : ButtonObject
         {
             boxes.Add(box);
 
+            float doorOpacity = (float)boxes.Count / (float)buttonNum;
+
+            if (doorOpacity > 1)
+                doorOpacity = 1f;
+
+            sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 1 - doorOpacity);
+
             // All the buttons are pressed, so we can open the door
-            if (boxes.Count >= buttonNum)
+            if (doorOpacity == 1f)
             {
-                sprite.enabled = false;
                 newCollider2D.enabled = false;
             }
         }
@@ -35,10 +41,16 @@ public class DoorMechanism : ButtonObject
     {
         boxes.Remove(box);
 
-        if (boxes.Count < buttonNum)
+        float doorOpacity = (float)boxes.Count / (float)buttonNum;
+
+        if (doorOpacity > 1)
+            doorOpacity = 1f;
+
+        sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 1 - doorOpacity);
+
+        if (doorOpacity < 1f)
         {
             // Close the door
-            sprite.enabled = true;
             newCollider2D.enabled = true;
         }
     }
