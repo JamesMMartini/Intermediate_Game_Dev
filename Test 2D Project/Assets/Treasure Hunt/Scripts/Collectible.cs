@@ -9,16 +9,33 @@ public class Collectible : MonoBehaviour
     public CircleCollider2D col;
     public AudioSource sound;
 
+    public Sprite[] sprites;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(Animate());
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    IEnumerator Animate()
+    {
+        int counter = 0;
+
+        while (true)
+        {
+            sprite.sprite = sprites[counter];
+            yield return new WaitForSeconds(0.15f);
+            counter++;
+
+            if (counter > sprites.Length - 1)
+                counter = 0;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
