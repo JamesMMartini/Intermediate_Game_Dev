@@ -5,8 +5,8 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     public GameObject player;
-    float yBuffer = 2f;
-    float xBuffer = 4f;
+    float yBuffer = 1f;
+    float xBuffer = 3f;
 
     public float leftBoundary = -48f;
     public float rightBoundary = 21f;

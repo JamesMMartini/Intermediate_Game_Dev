@@ -7,6 +7,7 @@ public class Collectible : MonoBehaviour
     public ScoreTracker tracker;
     public SpriteRenderer sprite;
     public CircleCollider2D col;
+    public AudioSource sound;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,8 @@ public class Collectible : MonoBehaviour
         if (collision.name == "Player")
         {
             tracker.score += 100;
+
+            sound.Play();
 
             col.enabled = false;
             sprite.enabled = false;

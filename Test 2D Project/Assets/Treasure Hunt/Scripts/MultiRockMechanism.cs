@@ -19,8 +19,8 @@ public class MultiRockMechanism : ButtonObject
     {
         foreach (GameObject rock in rocks)
         {
-            rock.GetComponent<SpriteRenderer>().enabled = false;
-            rock.GetComponent<CircleCollider2D>().enabled = false;
+            rock.GetComponent<SpriteRenderer>().enabled = true;
+            rock.GetComponent<CircleCollider2D>().enabled = true;
         }
     }
 }

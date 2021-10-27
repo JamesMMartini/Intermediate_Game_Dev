@@ -13,7 +13,7 @@ public class DoorMechanism : ButtonObject
         boxes = new List<GameObject>();
 
         sprite = GetComponent<SpriteRenderer>();
-        collider = GetComponent<Collider2D>();
+        newCollider2D = GetComponent<Collider2D>();
     }
 
     public override void ButtonPressed(GameObject box)
@@ -26,7 +26,7 @@ public class DoorMechanism : ButtonObject
             if (boxes.Count >= buttonNum)
             {
                 sprite.enabled = false;
-                collider.enabled = false;
+                newCollider2D.enabled = false;
             }
         }
     }
@@ -39,7 +39,7 @@ public class DoorMechanism : ButtonObject
         {
             // Close the door
             sprite.enabled = true;
-            collider.enabled = true;
+            newCollider2D.enabled = true;
         }
     }
 

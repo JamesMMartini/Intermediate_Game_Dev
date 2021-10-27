@@ -5,23 +5,23 @@ using UnityEngine;
 public class ButtonObject : MonoBehaviour
 {
     protected SpriteRenderer sprite;
-    protected Collider2D collider;
+    protected Collider2D newCollider2D;
 
     private void Awake()
     {
         sprite = GetComponent<SpriteRenderer>();
-        collider = GetComponent<Collider2D>();
+        newCollider2D = GetComponent<Collider2D>();
     }
 
     public virtual void ButtonPressed(GameObject box)
     {
         sprite.enabled = false;
-        collider.enabled = false;
+        newCollider2D.enabled = false;
     }
 
     public virtual void ButtonUnpressed(GameObject box)
     {
         sprite.enabled = true;
-        collider.enabled = true;
+        newCollider2D.enabled = true;
     }
 }
